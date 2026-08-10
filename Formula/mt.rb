@@ -1,13 +1,13 @@
 class Mt < Formula
   desc "mt CLI — задачний граф @7n/mt"
   homepage "https://github.com/nitra/mt-rust"
-  version "0.1.27"
+  version "0.1.28"
   license "ISC"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/nitra/mt-rust/releases/download/mt-v0.1.27/mt-darwin-arm64"
-      sha256 "271e8677ae2aec50525968dd338f3465d2d3841313419fa623ab75c1d136f449"
+      url "https://github.com/nitra/mt-rust/releases/download/mt-v0.1.28/mt-darwin-arm64"
+      sha256 "56f795bd1e92afe3b8f6f9367690ef24e4b06bb8c8f4a79c7cf65333aa6d546c"
 
       def install
         bin.install "mt-darwin-arm64" => "mt"
@@ -18,8 +18,8 @@ class Mt < Formula
   end
 
   on_linux do
-    url "https://github.com/nitra/mt-rust/releases/download/mt-v0.1.27/mt-linux-x64"
-    sha256 "8544b10361dd9a8b4ed1e6e4fb8d0a7c28ab8974ca58ed8994487e76a2ceca25"
+    url "https://github.com/nitra/mt-rust/releases/download/mt-v0.1.28/mt-linux-x64"
+    sha256 "12b34813ab01344f7c0d2db70f0ba88c83c45f6923720c29425f3537d1d12a01"
 
     def install
       bin.install "mt-linux-x64" => "mt"
