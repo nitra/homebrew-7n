@@ -21,8 +21,8 @@ class G < Formula
 
   # BEGIN_LINUX
   on_linux do
-    url "https://git.7n.ai/7n/g/releases/download/v0.1.2/g-x86_64-unknown-linux-musl"
-    sha256 "a94484fa30ab8433ab8fb106137bb6630beff0331f575c8980443195a38f6168"
+    url "https://git.7n.ai/7n/g/releases/download/v0.1.3/g-x86_64-unknown-linux-musl"
+    sha256 "5d39658b8c911baa9d24d1fb5dcfd055cd0c137a0a56bf1e4ef08f59afa26fef"
 
     def install
       bin.install "g-x86_64-unknown-linux-musl" => "g"
