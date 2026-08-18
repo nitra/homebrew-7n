@@ -4,18 +4,26 @@ class G < Formula
   version "0.1.2"
   license "ISC"
 
+  # BEGIN_MACOS
   on_macos do
-    odie "g: macOS-збірка ще не публікується (немає macOS-раннера в CI) — постав через 'cargo install n7n-g' або 'cargo binstall n7n-g' з локальною компіляцією."
-  end
+    if Hardware::CPU.arm?
+      url "https://git.7n.ai/7n/g/releases/download/v0.1.2/g-aarch64-apple-darwin"
+      sha256 "16f7239dcffb86b5a8d06bc139704e9bef887eef22da2c042142f04d660fddd1"
 
-  on_linux do
-    url "https://git.7n.ai/7n/g/releases/download/v0.1.0/g-x86_64-unknown-linux-musl"
-    sha256 "a62ea7ca75d75945668a9745e597e00e484b77cf4f9de48c4af2fbd4e1a1c331"
-
-    def install
-      bin.install "g-x86_64-unknown-linux-musl" => "g"
+      def install
+        bin.install "g-aarch64-apple-darwin" => "g"
+      end
+    else
+      odie "g: x86_64 macOS ще не підтримується (немає x86_64-apple-darwin ассету)"
     end
   end
+  # END_MACOS
+
+  # BEGIN_LINUX
+  on_linux do
+    odie "g: Linux build not yet published for this version"
+  end
+  # END_LINUX
 
   test do
     system "#{bin}/g", "--help"
