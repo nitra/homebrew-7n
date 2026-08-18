@@ -1,7 +1,7 @@
 class G < Formula
   desc "g CLI — git-дельта інструмент @7n/n (скорочено від git; репо git.7n.ai/7n/g)"
   homepage "https://git.7n.ai/7n/g"
-  version "0.1.0"
+  version "0.1.2"
   license "ISC"
 
   on_macos do
