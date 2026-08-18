@@ -21,7 +21,12 @@ class G < Formula
 
   # BEGIN_LINUX
   on_linux do
-    odie "g: Linux build not yet published for this version"
+    url "https://git.7n.ai/7n/g/releases/download/v0.1.2/g-x86_64-unknown-linux-musl"
+    sha256 "a94484fa30ab8433ab8fb106137bb6630beff0331f575c8980443195a38f6168"
+
+    def install
+      bin.install "g-x86_64-unknown-linux-musl" => "g"
+    end
   end
   # END_LINUX
 
