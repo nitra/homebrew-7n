@@ -8,7 +8,7 @@ class G < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://git.7n.ai/7n/g/releases/download/v0.1.4/g-aarch64-apple-darwin"
-      sha256 "a58d40510294ec5344a2b009d4805405d322b4399e46570a6e3c21b552633867"
+      sha256 "445584f781d0580f522d3e2526a49e174d33f636e3fb201cd68869ed7a13d81d"
 
       def install
         bin.install "g-aarch64-apple-darwin" => "g"
