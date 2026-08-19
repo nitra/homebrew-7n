@@ -1,14 +1,14 @@
 class G < Formula
   desc "g CLI — git-дельта інструмент @7n/n (скорочено від git; репо git.7n.ai/7n/g)"
   homepage "https://git.7n.ai/7n/g"
-  version "0.1.3"
+  version "0.1.4"
   license "ISC"
 
   # BEGIN_MACOS
   on_macos do
     if Hardware::CPU.arm?
-      url "https://git.7n.ai/7n/g/releases/download/v0.1.3/g-aarch64-apple-darwin"
-      sha256 "e37c598dac03bf02639c96d90fdb6d98f0cd34e81395228dd6f303cc2c40e4f5"
+      url "https://git.7n.ai/7n/g/releases/download/v0.1.4/g-aarch64-apple-darwin"
+      sha256 "a58d40510294ec5344a2b009d4805405d322b4399e46570a6e3c21b552633867"
 
       def install
         bin.install "g-aarch64-apple-darwin" => "g"
