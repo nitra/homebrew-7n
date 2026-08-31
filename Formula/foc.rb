@@ -1,13 +1,13 @@
 class Foc < Formula
   desc "Forgejo-first command-line client"
   homepage "https://git.7n.ai/nitra/foc"
-  version "0.1.8"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://git.7n.ai/nitra/foc/releases/download/v0.1.8/foc-aarch64-apple-darwin.tar.gz"
-      sha256 "4bdf88d17833f4c5c458b114a6960f40768168a7418fb43f065639203c1ef3e4"
+      url "https://raw.githubusercontent.com/nitra/homebrew-7n/main/assets/foc/0.2.0/foc-aarch64-apple-darwin.tar.gz"
+      sha256 "8f03ec642cb36b90b5e5f9bc2ad2ce985b81b48bb8d9b4eb9a8a5a4a0670baf2"
 
       def install
         bin.install "foc"
