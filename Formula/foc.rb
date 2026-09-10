@@ -1,13 +1,13 @@
 class Foc < Formula
   desc "Forgejo-first command-line client"
   homepage "https://git.7n.ai/nitra/foc"
-  version "0.16.3"
+  version "0.17.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://raw.githubusercontent.com/nitra/homebrew-7n/main/assets/foc/0.16.3/foc-aarch64-apple-darwin.tar.gz"
-      sha256 "a0a7fffeb5981a28d3c1d3e4f1656a2509b28c3813080f1ea9378624b0e07b50"
+      url "https://raw.githubusercontent.com/nitra/homebrew-7n/main/assets/foc/0.17.0/foc-aarch64-apple-darwin.tar.gz"
+      sha256 "b733ae97393d6571621882f755fc095462d54045587258341acc291883de16e5"
     else
       odie "foc: Intel macOS is not supported yet"
     end
@@ -15,11 +15,11 @@ class Foc < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://raw.githubusercontent.com/nitra/homebrew-7n/main/assets/foc/0.16.3/foc-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "418fb801b7671c74b1393ba93615b74ebf54d4cd4b62ba91a2cd629fae432cb2"
+      url "https://raw.githubusercontent.com/nitra/homebrew-7n/main/assets/foc/0.17.0/foc-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "b36ddbe31856a3e950c316303f52c2643d60e54a4bcdbcb3975a6523bdbf7a6a"
     elsif Hardware::CPU.arm?
-      url "https://raw.githubusercontent.com/nitra/homebrew-7n/main/assets/foc/0.16.3/foc-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "5fa0560f66c5248abc3435170405af478d9bbb1b04569068ab615bd46831832c"
+      url "https://raw.githubusercontent.com/nitra/homebrew-7n/main/assets/foc/0.17.0/foc-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "fa08cb9ffc2d781f8753f2be0abe260baeb4574cf3780b9341fe438f0aebe82b"
     else
       odie "foc: this Linux architecture is not supported yet"
     end
