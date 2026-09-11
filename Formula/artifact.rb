@@ -1,23 +1,23 @@
 class Artifact < Formula
   desc "Artifact gateway publisher CLI"
   homepage "https://git.7n.ai/nitra/artifact"
-  version "0.7.0"
+  version "0.7.3"
   license "MIT"
   on_macos do
     if Hardware::CPU.arm?
-      url "https://raw.githubusercontent.com/nitra/homebrew-7n/main/assets/artifact/0.7.0/artifact-aarch64-apple-darwin.tar.gz"
-      sha256 "26cbf7512618fa7ccf17777493b49fb28d8f289f17d57a93ef75096e96aae8c3"
+      url "https://7n.ai/artifacts/artifact-release/01a08f0f-6389-7353-b3dd-b5cff44d2381/artifact-aarch64-apple-darwin.tar.gz"
+      sha256 "69b5d131bcf4053178ccc77c55ceb5eb94eeb3bbbe7de344874137033aebef7b"
     else
       odie "artifact: Intel macOS is not supported"
     end
   end
   on_linux do
     if Hardware::CPU.intel?
-      url "https://raw.githubusercontent.com/nitra/homebrew-7n/main/assets/artifact/0.7.0/artifact-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "8435f2a3ebf68feab7b3b165d757b4bfbb958cb86ac008e3d047dc061fb21d1e"
+        url "https://7n.ai/artifacts/artifact-release/01a08f0f-6389-7353-b3dd-b5cff44d2381/artifact-x86_64-unknown-linux-gnu.tar.gz"
+        sha256 "cdc4958b38296ea05905e44434e6dc5f182bbcb5b539589c86b3b7740fa4d495"
     elsif Hardware::CPU.arm?
-      url "https://raw.githubusercontent.com/nitra/homebrew-7n/main/assets/artifact/0.7.0/artifact-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "950fe0a399896f7b3cc33be8d2a79a7799fd6ba7a87ec8002b04e276be027deb"
+        url "https://7n.ai/artifacts/artifact-release/01a08f0f-6389-7353-b3dd-b5cff44d2381/artifact-aarch64-unknown-linux-gnu.tar.gz"
+        sha256 "27b561b01ff823ded48b0d35f5bdf8613b09541e1f065591b88d5e9b19bcf903"
     end
   end
   def install; bin.install "artifact"; end
