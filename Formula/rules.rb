@@ -1,23 +1,23 @@
 class Rules < Formula
   desc "CLI еталонних правил і skills @7n/rules"
   homepage "https://git.7n.ai/7n/rules"
-  version "1.3.0"
+  version "1.4.0"
   license "Apache-2.0"
   on_macos do
     if Hardware::CPU.arm?
-      url "https://7n.ai/artifacts/rules-cli-release/01a153b3-6361-7d62-a418-66941a6d3e7b/rules-cli-aarch64-apple-darwin.tar.gz"
-      sha256 "df3cf67d9413f20d993253030da4eb0ce9c27c5a5672c404c7c8b338e4b10f03"
+      url "https://7n.ai/artifacts/rules-cli-release/01a1642d-3dbb-7a00-995c-38a458a0d0dd/rules-cli-aarch64-apple-darwin.tar.gz"
+      sha256 "0635bcae35532ba7bab69a416bf85b7b535a7eaaafb108b4f1b58d31d33990bd"
     else
       odie "rules: Intel macOS is not supported"
     end
   end
   on_linux do
     if Hardware::CPU.intel?
-      url "https://7n.ai/artifacts/rules-cli-release/01a153b3-6361-7d62-a418-66941a6d3e7b/rules-cli-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "e2aa0f2cc1db354411066734600a3eb403370a89558e19b52b325191a4edfff1"
+      url "https://7n.ai/artifacts/rules-cli-release/01a1642d-3dbb-7a00-995c-38a458a0d0dd/rules-cli-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "6087cf623901a016a8ad5fcd717513b0b5926493bf43ea7e9d2f4a362d33932b"
     elsif Hardware::CPU.arm?
-      url "https://7n.ai/artifacts/rules-cli-release/01a153b3-6361-7d62-a418-66941a6d3e7b/rules-cli-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "111b59c0237dae52f572107653ba5aaa83859b84d9ce73adf2baf7b39ca88b20"
+      url "https://7n.ai/artifacts/rules-cli-release/01a1642d-3dbb-7a00-995c-38a458a0d0dd/rules-cli-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "a6d32123f03a61c361f8bc766521efbb06d09b37c895b26dd76ef204862f9c17"
     else
       odie "rules: this Linux architecture is not supported"
     end
