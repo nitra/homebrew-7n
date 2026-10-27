@@ -1,23 +1,23 @@
 class Foc < Formula
   desc "Forgejo-first command-line client"
   homepage "https://git.7n.ai/nitra/foc"
-  version "0.19.1"
+  version "0.20.0"
   license "MIT"
   on_macos do
     if Hardware::CPU.arm?
-      url "https://7n.ai/artifacts/foc-release/01a145c3-73ef-7a01-9500-280b23b7b81b/foc-aarch64-apple-darwin.tar.gz"
-      sha256 "5975fa0102c770403ac97a4ac6c5fb61e23e25d8ff10ab0890863d119813eb73"
+      url "https://7n.ai/artifacts/foc-release/01a17cbd-8d09-7a02-b26e-8c237f0950e0/foc-aarch64-apple-darwin.tar.gz"
+      sha256 "014f8a0bab34dbceaebef4ff57648f1683f7cfac153e3645a1b4b897ce479210"
     else
       odie "foc: Intel macOS is not supported"
     end
   end
   on_linux do
     if Hardware::CPU.intel?
-      url "https://7n.ai/artifacts/foc-release/01a145c3-73ef-7a01-9500-280b23b7b81b/foc-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "3cf188219eae1668563b457b5c09290165122ac429ff64c7b652892ab083dee4"
+      url "https://7n.ai/artifacts/foc-release/01a17cbd-8d09-7a02-b26e-8c237f0950e0/foc-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "6417554585d75386885e7b60c5fb6f5bf9ce427b6f3ff794942b23eb22d44394"
     elsif Hardware::CPU.arm?
-      url "https://7n.ai/artifacts/foc-release/01a145c3-73ef-7a01-9500-280b23b7b81b/foc-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "470eba484b0943b48abc9e3e668b5db2cdb5502975bd79b31c8ebecf9bcd35dd"
+      url "https://7n.ai/artifacts/foc-release/01a17cbd-8d09-7a02-b26e-8c237f0950e0/foc-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "c0d02673ed7614ff070475ca9f1fa0feda15ad4aeee92da814be81103e91ca1e"
     else
       odie "foc: this Linux architecture is not supported"
     end
