@@ -1,23 +1,23 @@
 class Mt < Formula
   desc "mt task graph CLI"
   homepage "https://git.7n.ai/metatask/mt-rust"
-  version "0.4.2"
+  version "0.4.3"
   license "ISC"
   on_macos do
     if Hardware::CPU.arm?
-      url "https://7n.ai/artifacts/mt-release/01a1ca43-e496-7801-ba5c-2e8f0af2baba/mt-aarch64-apple-darwin.tar.gz"
-      sha256 "157f2d136438b8fc47470f98f2b2f9264a4f46159a06a503309ed469f823f569"
+      url "https://7n.ai/artifacts/mt-release/01a1ca96-d7fe-7430-ac3a-aa70c2013052/mt-aarch64-apple-darwin.tar.gz"
+      sha256 "3e03250a88f5df735efb34ad09d4b30b7adffb27385271fa54d877db3afa24c4"
     else
       odie "mt: Intel macOS is not supported"
     end
   end
   on_linux do
     if Hardware::CPU.intel?
-      url "https://7n.ai/artifacts/mt-release/01a1ca43-e496-7801-ba5c-2e8f0af2baba/mt-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "4dbd08e3a6749b451e0912458fd8decf8a0a52d08ff978a9fb22aacd604bb19e"
+      url "https://7n.ai/artifacts/mt-release/01a1ca96-d7fe-7430-ac3a-aa70c2013052/mt-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "063c557290a8786aa60d4df314fd98f961a2683a303c243703a8cb2b6bb78239"
     elsif Hardware::CPU.arm?
-      url "https://7n.ai/artifacts/mt-release/01a1ca43-e496-7801-ba5c-2e8f0af2baba/mt-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "5c6b9c52f68a148a79adc17e294ab585c1db34d399e5d96b8d06242f77a19942"
+      url "https://7n.ai/artifacts/mt-release/01a1ca96-d7fe-7430-ac3a-aa70c2013052/mt-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "f0d116589a6832c7ea7a6f6b7e904cf7bb72bf2b2a6f42cbe82f1b82a6547b78"
     else
       odie "mt: this Linux architecture is not supported"
     end
