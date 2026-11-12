@@ -1,23 +1,23 @@
 class Workforce < Formula
   desc "Коментарі між вузлами Metatask для людей і агентів"
   homepage "https://git.7n.ai/metatask/workforce"
-  version "0.2.0"
+  version "0.3.0"
   license "ISC"
   on_macos do
     if Hardware::CPU.arm?
-      url "https://7n.ai/artifacts/workforce-release/01a1caf5-274a-7953-bb52-ab949b1d69dc/workforce-aarch64-apple-darwin.tar.gz"
-      sha256 "25b9b551de62998c40e67a9b7aa733a9b65b75141f5532aa7228228010ca541e"
+      url "https://7n.ai/artifacts/workforce-release/01a1cebf-f6c4-7040-bea8-30933bd6e912/workforce-aarch64-apple-darwin.tar.gz"
+      sha256 "40b58f786e48d12b783ad0924f93cc4f07ecdbe914b2a5c1ec9b5e1e07d6e939"
     else
       odie "workforce: Intel macOS is not supported"
     end
   end
   on_linux do
     if Hardware::CPU.intel?
-      url "https://7n.ai/artifacts/workforce-release/01a1caf5-274a-7953-bb52-ab949b1d69dc/workforce-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "4419603141d6e64611434359ae482b58cf9108743dd494e38368ce9b63c36a62"
+      url "https://7n.ai/artifacts/workforce-release/01a1cebf-f6c4-7040-bea8-30933bd6e912/workforce-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "6436034166f4d4f5f5877c9bb7e1761f196c6525ff6c888c08ceae40cf665de0"
     elsif Hardware::CPU.arm?
-      url "https://7n.ai/artifacts/workforce-release/01a1caf5-274a-7953-bb52-ab949b1d69dc/workforce-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "85c8736dcf69977bef1c50f91dcd784254137b78b648aea08b51393ff3579add"
+      url "https://7n.ai/artifacts/workforce-release/01a1cebf-f6c4-7040-bea8-30933bd6e912/workforce-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "b051dd7781346384da3ee4c55c8ea6c5c9f06f3db265c1e5adec399b9fe0a85b"
     else
       odie "workforce: this Linux architecture is not supported"
     end
