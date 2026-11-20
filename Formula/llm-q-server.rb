@@ -1,23 +1,23 @@
 class LlmQServer < Formula
   desc "llm-q server"
   homepage "https://git.7n.ai/7n/llm-q"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
   on_macos do
     if Hardware::CPU.arm?
-      url "https://7n.ai/artifacts/llm-q-release/01a1f819-a263-70c3-bd8e-41c29a60523a/llm-q-server-aarch64-apple-darwin.tar.gz"
-      sha256 "f7093c2d13574822d4bae90221329c427f195d80d19cb88d99e3755f2d0a7dcc"
+      url "https://7n.ai/artifacts/llm-q-release/01a1f906-e9db-7872-8b63-11549ea2d0b8/llm-q-server-aarch64-apple-darwin.tar.gz"
+      sha256 "7b63eb039918839d5baa911f3dd45f9b271418b95520d53c6fe25ea8aa2fa7dc"
     else
       odie "llm-q-server: Intel macOS is not supported"
     end
   end
   on_linux do
     if Hardware::CPU.intel?
-      url "https://7n.ai/artifacts/llm-q-release/01a1f819-a263-70c3-bd8e-41c29a60523a/llm-q-server-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "a3c74b7b1396e6e2ac25f3ad8811e9eeb3ad3653f8904f068d4340e98391f4ad"
+      url "https://7n.ai/artifacts/llm-q-release/01a1f906-e9db-7872-8b63-11549ea2d0b8/llm-q-server-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "6ce38580535b1d51c294599c6d3263a4e85f842784b21d05b71ddf0a5c4a34ab"
     elsif Hardware::CPU.arm?
-      url "https://7n.ai/artifacts/llm-q-release/01a1f819-a263-70c3-bd8e-41c29a60523a/llm-q-server-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "0ea74c01495b69fbf155cea7bf7cb79258a70e7a5a9acedae7b3429a9349e672"
+      url "https://7n.ai/artifacts/llm-q-release/01a1f906-e9db-7872-8b63-11549ea2d0b8/llm-q-server-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "a9278b1222d63b12708107d6ddc4fc645c350923d4a0a928f121fecdb2ec4f52"
     else
       odie "llm-q-server: this Linux architecture is not supported"
     end
