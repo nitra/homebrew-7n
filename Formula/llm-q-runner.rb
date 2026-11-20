@@ -1,12 +1,12 @@
 class LlmQRunner < Formula
   desc "llm-q runner"
   homepage "https://git.7n.ai/7n/llm-q"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
   on_macos do
     if Hardware::CPU.arm?
-      url "https://7n.ai/artifacts/llm-q-release/01a1f819-a263-70c3-bd8e-41c29a60523a/llm-q-runner-aarch64-apple-darwin.tar.gz"
-      sha256 "51789aeaf66d8b60b102046ef1cc6008e59f1f02beb5755890145936d1960c9d"
+      url "https://7n.ai/artifacts/llm-q-release/01a1f906-e9db-7872-8b63-11549ea2d0b8/llm-q-runner-aarch64-apple-darwin.tar.gz"
+      sha256 "d63b8ee4533f16ac95eaf84f5847c43290a8bff4e2f1abe120dff849fd7d287e"
     else
       odie "llm-q-runner: Intel macOS is not supported"
     end
