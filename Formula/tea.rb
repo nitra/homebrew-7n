@@ -1,23 +1,23 @@
 class Tea < Formula
   desc "Forgejo-first command-line client"
   homepage "https://git.7n.ai/nitra/tea"
-  version "0.21.1"
+  version "0.22.0"
   license "MIT"
   on_macos do
     if Hardware::CPU.arm?
-      url "https://7n.ai/artifacts/foc-release/01a1e06a-b89c-77b1-bff8-ae307b4a10b8/tea-aarch64-apple-darwin.tar.gz"
-      sha256 "55115ccb888f81f1c3d8042d66eab8afd5aebabe0c63c0be7ff12adae254700d"
+      url "https://7n.ai/artifacts/foc-release/01a2088e-e8d8-71a2-af58-4af54f01399c/tea-aarch64-apple-darwin.tar.gz"
+      sha256 "1a11c6abf845f65d8e7660e52ee04641f289b17685d45337d276ab7b5302dc8e"
     else
       odie "tea: Intel macOS is not supported"
     end
   end
   on_linux do
     if Hardware::CPU.intel?
-      url "https://7n.ai/artifacts/foc-release/01a1e06a-b89c-77b1-bff8-ae307b4a10b8/tea-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "c43751d858be174ad81037e5979212f0f38ff75ca56396323affa45a546b38f0"
+      url "https://7n.ai/artifacts/foc-release/01a2088e-e8d8-71a2-af58-4af54f01399c/tea-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "2dfd883fdcd634beac130ea14a3fcf6b5fcb661ebd91f1352edb89d4a99ed438"
     elsif Hardware::CPU.arm?
-      url "https://7n.ai/artifacts/foc-release/01a1e06a-b89c-77b1-bff8-ae307b4a10b8/tea-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "16efeede640151fda0c9664a7b9852c40818d813c8d01e31cd9c6b92da891f52"
+      url "https://7n.ai/artifacts/foc-release/01a2088e-e8d8-71a2-af58-4af54f01399c/tea-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "59e4bbc45122f2ed10ea9b00839c2582bfd6bea3e39ecc7947887052510aacee"
     else
       odie "tea: this Linux architecture is not supported"
     end
